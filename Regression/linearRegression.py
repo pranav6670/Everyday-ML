@@ -25,9 +25,9 @@ Y = data['Brain Weight(grams)'].values
 
 # Error is given as:
 
-#           n
-# error  =  ∑ (ri)^2
-# 	       i=1
+#
+# error  =  ∑ (r)^2
+#
 
 # n= total length
 # ri = distance between line and ith point
@@ -36,11 +36,11 @@ Y = data['Brain Weight(grams)'].values
 # some points would be above the line and some below.
 
 # Now we have:
-# 		∑  (Xi-x_mean)*(Yi-y_mean)
-#       i
+# 		∑  (X-x_mean)*(Y-y_mean)
+#
 # m =  ――――――――――――――――――――――――――――――
-# 	          ∑  (Xi-x_mean)^2
-#             i
+# 	          ∑  (X-x_mean)^2
+#
 
 
 # c = y_mean - (m * x_mean)
