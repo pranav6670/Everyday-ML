@@ -3,7 +3,7 @@ __author__ = "Pranav Natekar"
 import numpy as np
 
 # Inputs for gates
-inp = [(0, 0), (1, 0), (0, 1), (1, 1)]
+inp = [(0, 0), (0, 1), (1, 0), (1, 1)]
 # Input for not gate
 inp_not = [0, 1]
 
@@ -22,14 +22,32 @@ def AND(x1, x2):
     :param x2: 2nd input to AND gate
     :return: 0, 1 based on input
     """
-    # x1 x2 y
-    # 0  0  0
-    # 0  1  0
-    # 1  0  0
-    # 1  1  1
-    x = np.array([x1, x2])
-    w = np.array([1, 1])
-    y = np.sum(w*x)
+    # Truth table
+    #  _____________
+    # | x1 | x2 | y |
+    # |-------------|
+    # | 0  | 0  | 0 |
+    # | 0  | 1  | 0 |
+    # | 1  | 0  | 0 |
+    # | 1  | 1  | 1 |
+    #  -------------
+
+    # Let's initialize the weights to 1 and bias to -1 : x1*1 + x2*1 - 1.
+    # We know, y' = W*x + b
+    # For 1st row in the input:
+    # 0*1 + 0*1 - 1 = -1
+    # According to perceptron rule it's correct.
+    # For 2nd row in the input:
+    # 0*1 + 1*1 -1 = 0
+    # This defies the perceptron rule as, if w*x + b >= 0, then y'=1
+    # Adjusting bias to -1.5, will make the combination of
+    # x1 = 0 and x2 = 1 to give y' = 0.
+    # This bias is valid to all 4 inputs.
+
+    x = np.array([1, x1, x2])
+    b = -1.5
+    w = np.array([b, 1, 1])
+    y = np.sum(w * x)
     if y <= 0:
         return 0
     else:
@@ -37,8 +55,26 @@ def AND(x1, x2):
 
 
 def OR(x1, x2):
-    x = np.array([x1, x2])
-    w = np.array([1, 1])
+    """
+    Function to model the OR gate
+    :param x1: 1st input to OR gate
+    :param x2: 2nd input to OR gate
+    :return: 0, 1 based on input
+    """
+    # Truth table
+    #  _____________
+    # | x1 | x2 | y |
+    # |-------------|
+    # | 0  | 0  | 0 |
+    # | 0  | 1  | 1 |
+    # | 1  | 0  | 1 |
+    # | 1  | 1  | 1 |
+    #  -------------
+    # Let's initialize the weights to 1 and bias to -0.5 : x1*1 + x2*1 - 0.5.
+    # Initialization with above parameters follows the perceptron rule.
+    x = np.array([1, x1, x2])
+    b = -0.5
+    w = np.array([b, 1, 1])
     y = np.sum(w*x)
     if y <= 0:
         return 0
@@ -47,8 +83,27 @@ def OR(x1, x2):
 
 
 def NAND(x1, x2):
-    x = np.array([x1, x2])
-    w = np.array([-1, -1])
+    """
+    Function to model the NAND gate
+    :param x1: 1st input to NAND gate
+    :param x2: 2nd input to OR gate
+    :return: 0, 1 based on input
+    """
+    # Truth table
+    #  _____________
+    # | x1 | x2 | y |
+    # |-------------|
+    # | 0  | 0  | 1 |
+    # | 0  | 1  | 1 |
+    # | 1  | 0  | 1 |
+    # | 1  | 1  | 0 |
+    #  -------------
+    # Let's initialize the weights to -1 and bias to 1.5 : x1*-1 + x2*-1 + 1.5.
+    # Initialization with above parameters follows the perceptron rule.
+    # Note that bias and weights for AND and NAND are complementary.
+    x = np.array([1, x1, x2])
+    b = 1.5
+    w = np.array([b, -1, -1])
     y = np.sum(w*x)
     if y <= 0:
         return 0
@@ -56,19 +111,90 @@ def NAND(x1, x2):
         return 1
 
 
-typeof = input("Enter the type of gate")
-# print(type)
+def NOR(x1, x2):
+    """
+    Function to model the NOR gate
+    :param x1: 1st input to NOR gate
+    :param x2: 2nd input to NOR gate
+    :return: 0, 1 based on input
+    """
+    # Truth table
+    #  _____________
+    # | x1 | x2 | y |
+    # |-------------|
+    # | 0  | 0  | 1 |
+    # | 0  | 1  | 0 |
+    # | 1  | 0  | 0 |
+    # | 1  | 1  | 0 |
+    #  -------------
+    # Let's initialize the weights to -1 and bias to 0.5 : x1*-1 + x2*-1 + 0.5.
+    # Initialization with above parameters follows the perceptron rule.
+    # Note that bias and weights for OR and NOR are complementary.
+    x = np.array([1, x1, x2])
+    b = 0.5
+    w = np.array([b, -1, -1])
+    y = np.sum(w * x)
+    if y <= 0:
+        return 0
+    else:
+        return 1
 
+def NOT(x1):
+    """
+    Function to map NOT gate.
+    :param x1: Input to NOT gate.
+    :return: 0 or 1 based on input.
+    """
+    # Truth table
+    #  _________
+    # | x1 | y  |
+    # |---------|
+    # | 0  |  1 |
+    # | 1  |  0 |
+    #  ---------
+    # Let's initialize the weights to -1 and bias to 0.5 : x1*-1 + 0.5.
+    # Initialization with above parameters follows the perceptron rule.
+    x = np.array([1, x1])
+    b = 0.5
+    w = np.array([b, -1])
+    y = np.sum(w * x)
+    if y <= 0:
+        return 0
+    else:
+        return 1
+
+
+typeof = input("Enter the type of gate: ")
 
 if typeof == 'AND':
     print("AND gate selected")
+    for x in inp:
+        y = AND(x[0], x[1])
+        print(str(x) + " -> " + str(y))
+
 elif typeof == 'OR':
     print("OR gate selected")
+    for x in inp:
+        y = OR(x[0], x[1])
+        print(str(x) + " -> " + str(y))
+
 elif typeof == 'NAND':
     print("NAND gate selected")
+    for x in inp:
+        y = NAND(x[0], x[1])
+        print(str(x) + " -> " + str(y))
+
 elif typeof == 'NOR':
     print("NOR gate selected ")
+    for x in inp:
+        y = NOR(x[0], x[1])
+        print(str(x) + " -> " + str(y))
+
 elif typeof == 'NOT':
     print("NOT gate selected ")
+    for x in inp_not:
+        y = NOT(x)
+        print(str(x) + " -> " + str(y))
+
 else:
     print("Don't come here")
