@@ -17,7 +17,7 @@ inp_not = [0, 1]
 
 def AND(x1, x2):
     """
-    Function to model the AND gate
+    Function to model the AND gate.
     :param x1: 1st input to AND gate
     :param x2: 2nd input to AND gate
     :return: 0, 1 based on input
@@ -56,7 +56,7 @@ def AND(x1, x2):
 
 def OR(x1, x2):
     """
-    Function to model the OR gate
+    Function to model the OR gate.
     :param x1: 1st input to OR gate
     :param x2: 2nd input to OR gate
     :return: 0, 1 based on input
@@ -84,7 +84,7 @@ def OR(x1, x2):
 
 def NAND(x1, x2):
     """
-    Function to model the NAND gate
+    Function to model the NAND gate.
     :param x1: 1st input to NAND gate
     :param x2: 2nd input to OR gate
     :return: 0, 1 based on input
@@ -113,7 +113,7 @@ def NAND(x1, x2):
 
 def NOR(x1, x2):
     """
-    Function to model the NOR gate
+    Function to model the NOR gate.
     :param x1: 1st input to NOR gate
     :param x2: 2nd input to NOR gate
     :return: 0, 1 based on input
@@ -164,6 +164,7 @@ def NOT(x1):
         return 1
 
 
+# Take input from user.
 typeof = input("Enter the type of gate: ")
 
 if typeof == 'AND':
@@ -197,4 +198,4 @@ elif typeof == 'NOT':
         print(str(x) + " -> " + str(y))
 
 else:
-    print("Don't come here")
+    print("Why are you here?-_-")
