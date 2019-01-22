@@ -18,9 +18,9 @@ inp_not = [0, 1]
 def AND(x1, x2):
     """
     Function to model the AND gate.
-    :param x1: 1st input to AND gate
-    :param x2: 2nd input to AND gate
-    :return: 0, 1 based on input
+    :x1: 1st input to AND gate
+    :x2: 2nd input to AND gate
+    :returns: 0, 1 based on input
     """
     # Truth table
     #  _____________
@@ -57,9 +57,9 @@ def AND(x1, x2):
 def OR(x1, x2):
     """
     Function to model the OR gate.
-    :param x1: 1st input to OR gate
-    :param x2: 2nd input to OR gate
-    :return: 0, 1 based on input
+    :x1: 1st input to OR gate
+    :x2: 2nd input to OR gate
+    :returns: 0, 1 based on input
     """
     # Truth table
     #  _____________
@@ -85,9 +85,9 @@ def OR(x1, x2):
 def NAND(x1, x2):
     """
     Function to model the NAND gate.
-    :param x1: 1st input to NAND gate
-    :param x2: 2nd input to OR gate
-    :return: 0, 1 based on input
+    :x1: 1st input to NAND gate
+    :x2: 2nd input to OR gate
+    :returns: 0, 1 based on input
     """
     # Truth table
     #  _____________
@@ -114,9 +114,9 @@ def NAND(x1, x2):
 def NOR(x1, x2):
     """
     Function to model the NOR gate.
-    :param x1: 1st input to NOR gate
-    :param x2: 2nd input to NOR gate
-    :return: 0, 1 based on input
+    :x1: 1st input to NOR gate
+    :x2: 2nd input to NOR gate
+    :returns: 0, 1 based on input
     """
     # Truth table
     #  _____________
@@ -142,8 +142,8 @@ def NOR(x1, x2):
 def NOT(x1):
     """
     Function to map NOT gate.
-    :param x1: Input to NOT gate.
-    :return: 0 or 1 based on input.
+    :x1: Input to NOT gate.
+    :returns: 0 or 1 based on input.
     """
     # Truth table
     #  _________
@@ -166,6 +166,9 @@ def NOT(x1):
 
 # Take input from user.
 typeof = input("Enter the type of gate: ")
+if not typeof.isupper():
+    print("You've entered lowercase, I'm converting it to upper!")
+    typeof = typeof.upper()
 
 if typeof == 'AND':
     print("AND gate selected")
