@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef43e5db-8740-41a6-8c48-21ba657d120d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/simpleMPNeuron.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Regression/linearRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/Regression/linearRegression.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,48 +14,67 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Everyday_ML$linearRegression.coverage" NAME="linearRegression Coverage Results" MODIFIED="1547372378098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Regression" />
+    <SUITE FILE_PATH="coverage/Everyday_ML$simpleMPNeuron.coverage" NAME="simpleMPNeuron Coverage Results" MODIFIED="1547707230907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1325446861">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1039" />
-          <entry key="txt" value="27" />
+          <entry key="py" value="1901" />
+          <entry key="txt" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="27" />
-          <entry key="Python" value="1039" />
+          <entry key="PLAIN_TEXT" value="28" />
+          <entry key="Python" value="1901" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Regression/linearRegression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="340">
+              <caret line="121" column="39" lean-forward="true" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+              <folding>
+                <element signature="e#23#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/simpleMPNeuron.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1547707230730" expanded="true" signature="186:557" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,6 +95,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Regression/linearRegression.py" />
+        <option value="$PROJECT_DIR$/simpleMPNeuron.py" />
       </list>
     </option>
   </component>
@@ -116,7 +138,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myfinalProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
@@ -133,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.simpleMPNeuron">
     <configuration name="linearRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Everyday Ml" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,8 +178,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="simpleMPNeuron" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Everyday Ml" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simpleMPNeuron.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.linearRegression" />
+      <item itemvalue="Python.simpleMPNeuron" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.simpleMPNeuron" />
         <item itemvalue="Python.linearRegression" />
       </list>
     </recent_temporary>
@@ -187,13 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547372646982</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Linear Regression Analysis.">
+      <created>1547570706860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547570706860</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377885" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26173428" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -224,13 +281,28 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Linear Regression Analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Linear Regression Analysis" />
+    <MESSAGE value="Linear Regression Analysis." />
+    <option name="LAST_COMMIT_MESSAGE" value="Linear Regression Analysis." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Regression/linearRegression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="340">
+          <caret line="121" column="39" lean-forward="true" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleMPNeuron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1547707230730" expanded="true" signature="186:557" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

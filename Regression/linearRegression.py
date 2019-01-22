@@ -24,7 +24,6 @@ Y = data['Brain Weight(grams)'].values
 # between X and Y which estimates the relationship between X and Y.
 
 # Error is given as:
-
 #
 # error  =  ∑ (r)^2
 #
