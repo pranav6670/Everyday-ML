@@ -28,7 +28,7 @@ Y = data['Brain Weight(grams)'].values
 # error  =  ∑ (r)^2
 #
 
-# n= total length
+# n = total length
 # ri = distance between line and ith point
 
 # Squaring each of the distance’s because
@@ -126,4 +126,5 @@ score = 1 - (sumofresiduals / sumofsquares)
 print("R² Score: ", score)
 
 plt.legend()
+plt.savefig('plot.png')
 plt.show()
