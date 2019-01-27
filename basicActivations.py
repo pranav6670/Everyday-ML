@@ -21,11 +21,14 @@ def tanh(x):
     denominator = np.exp(x) + np.exp(-x)
     return numerator / denominator
 
+def softplus(x):
+    return np.log(1 + np.exp(x))
 
 t = tanh(x)
 b = binarystep(x)
 s = sigmoid(x)
 r = relu(x)
+sp = softplus(x)
 
 plt.figure(1)
 plt.plot(x, s, label='Sigmoid', color='blue', linestyle='--')
@@ -33,6 +36,7 @@ plt.plot(x, t, label='tanh', color='red', linestyle=None)
 plt.legend()
 
 plt.figure(2)
+plt.plot(x, sp, label='Softplus', color='violet', linestyle='-')
 plt.plot(x, r, label='ReLU', color='green', linestyle='-.')
 plt.plot(x, b, label='Binary Step', color='red', linestyle=None)
 plt.legend()
