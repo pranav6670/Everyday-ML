@@ -1,4 +1,3 @@
-
 from sklearn.svm import SVC
 import numpy as np
 import matplotlib.pyplot as plt
@@ -31,10 +30,15 @@ title = ('Decision surface of linear SVC ')
 X0, X1 = X[:, 0], X[:, 1]
 xx, yy = make_meshgrid(X0, X1)
 
+a = clf.predict(np.c_[4.8, 3.1])
+print(a)
+
 plot_contours(ax, clf, xx, yy, cmap=plt.cm.coolwarm, alpha=0.8)
 ax.scatter(X0, X1, c=y, cmap=plt.cm.coolwarm, s=20, edgecolors='k')
-ax.set_ylabel('y label here')
-
-
+ax.set_xticks(())
+ax.set_yticks(())
+ax.set_title(title)
+ax.legend()
+plt.show()
 
 
