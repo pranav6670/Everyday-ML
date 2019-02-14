@@ -1,10 +1,4 @@
 
-You have to choose only 2 features to do this. The reason is that you cannot plot a 7D plot. After selecting the 2 features use only these for the visualization of the decision surface.
-
-Now, the next question that you would ask if How can I choose these 2 features?. Well, there are a lot of ways. You could do a univariate F-value (feature ranking) test and see what features/variables are the most important. Then you could use these for the plot. Also, we could reduce the dimensionality from 7 to 2 using PCA for example.
-
-2D plot for 2 features and using the iris dataset
-
 from sklearn.svm import SVC
 import numpy as np
 import matplotlib.pyplot as plt
