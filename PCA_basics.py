@@ -1,7 +1,10 @@
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Input
-X = np.array([[1, 2], [3, 4], [5, 6]])
+# X = np.array([[4, 7, 5, 2], [10, 13, 7, 4], [9, 10, 16, 14], [11, 16, 15, 8]])
+X = np.random.rand(10, 2)
 print("Input Matrix: \n", X)
 
 # Mean of data
@@ -44,4 +47,5 @@ eig_pairs.reverse()
 print('Eigenvalues in descending order:')
 for i in eig_pairs:
     print(i[0])
-
+plt.scatter(X, zero_mean)
+plt.show()
