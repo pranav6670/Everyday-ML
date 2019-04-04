@@ -1,3 +1,5 @@
+__author__ = "Pranav Natekar"
+
 
 import numpy as np
 import matplotlib.pyplot as plt
