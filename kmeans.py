@@ -1,3 +1,5 @@
+__author__ = "Pranav Natekar"
+
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -33,7 +35,7 @@ plt.show()
 
 
 class K_Means:
-    def __init__(self, k=3, tol=2, max_iter=100):
+    def __init__(self, k=2, tol=2, max_iter=100):
         self.k = k
         self.tol = tol
         self.max_iter = max_iter

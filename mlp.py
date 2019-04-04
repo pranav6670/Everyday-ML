@@ -1,3 +1,5 @@
+__author__ = "Pranav Natekar"
+
 import numpy as np
 
 
@@ -97,6 +99,6 @@ if __name__ == '__main__':
     y = np.array([0, 1, 1, 0])
 
     nn.fit(X, y)
-
+    print("Output :-\n")
     for e in X:
         print(e, nn.predict(e))
