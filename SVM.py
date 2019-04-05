@@ -25,7 +25,7 @@ clf = model.fit(X, y)
 
 fig, ax = plt.subplots()
 # title for the plots
-title = ('Decision surface of linear SVC ')
+title = ()
 # Set-up grid for plotting.
 X0, X1 = X[:, 0], X[:, 1]
 xx, yy = make_meshgrid(X0, X1)
@@ -40,5 +40,3 @@ ax.set_yticks(())
 ax.set_title(title)
 ax.legend()
 plt.show()
-
-
